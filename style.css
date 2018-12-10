@@ -47,16 +47,18 @@ body > div#main > span > div#static_links {
 	color: var(--txt)22;
 	padding-right: 7px;
 	padding-left: 5px;
-	line-height: 30px;
+	line-height: 48px;
 	text-align: right;
 	font-size: 16px;
 	border: none;
 	width: 908px;
-	height: 30px;
+	height: 48px;
 }
 
 body > div#main > span > div#static_links > span#clock {
 	margin-right: 15px;
+	font-size: 32px;	
+	font-weight: bold;
 }
 
 body > div#main > span > div#static_links > span:first-of-type {
@@ -148,4 +150,8 @@ div#links > div.section > div > a.selected {
 
 div#links > div.section > div > a + a {
 	margin-top: 5px;
+}
+
+.section-title {
+	line-height: 28px
 }

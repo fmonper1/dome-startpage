@@ -34,38 +34,38 @@
 // div.innerHTML : {a.innerHTML : a.href}
 var sites = {
 			"Reddit": {
-				"r/globaloffensive/": "https://www.reddit.com/r/GlobalOffensive/",
+				"r/globaloffensive": "https://www.reddit.com/r/GlobalOffensive/",
 				"r/PUBG"			: "https://www.reddit.com/r/PUBATTLEGROUNDS/",
 				"r/pcmasterrace"	: "https://www.reddit.com/r/pcmasterrace/",
-				"8/b/"				: "https://8ch.net/b/index.html"
+				"r/webdesign"		: "https://www.reddit.com/r/web_design/",
+				"r/pcmasterrace"	: "https://www.reddit.com/r/pcmasterrace/",
+				"r/startpage"		: "https://www.reddit.com/r/startpages/",
 			},
-			"Social": {
-				"GitHub"			: "https://github.com/fmonper1",
+			"Entretenimiento": {
 				"YouTube"			: "https://www.youtube.com/",
-				"Twitter"			: "https://twitter.com/"
+				"Twitter"			: "https://twitter.com/",
+				"Mediavida"			: "https://mediavida.com/",
+				"Netflix"			: "https://www.netflix.com",
+				"Imgur"				: "https://www.imgur.com"
 			},
-			"E-Mail": {
-				"GMail"				: "https://mail.google.com/mail/u/0/",
-				"Hotmail"			: "https://outlook.live.com/owa/",
-				"Zoho Mail"			: "https://mail.zoho.eu/zm/#mail/folder/inbox"
-			},
-			"Games": { // To find the game ID check the url in the store page or the community page
+			"Juegos": { // To find the game ID check the url in the store page or the community page
 				"CS:GO"				: "steam://run/730",
 				"HLTV"				: "https://www.hltv.org",
-				"CSGO-STASH"		: "https://www.csgo-stash.com",
+				"csgostash"			: "https://www.csgostash.com",
 				"BitSkins"			: "https://www.bitskins.com",
 				"FaceIt"			: "https://www.faceit.com",
 			},
-			"News": {
+			"Noticias": {
 				"El Mundo"			: "https://www.elmundo.es/",
 				"AS"				: "https://www.as.com/",
+				"Xataka"			: "https://www.xataka.com/",
+				"Genbeta"			: "https://www.genbeta.com/",
 				"El Chapuzas"		: "http://www.elchapuzasinformatico.com/"
 			},
-			"My stuff": {
-				"capuno.cat"		: "https://capuno.cat/",
-				"gnu.cat"			: "https://gnu.cat/",
-				"life"				: "https://life.capuno.cat/",
-				"rice"				: "https://rice.capuno.cat/"
+			"Productividad": {				
+				"GitHub"			: "https://github.com/fmonper1",				
+				"GMail"				: "https://mail.google.com/mail/u/0/",
+				"WhatsApp"			: "https://web.whatsapp.com"
 			},
 			"University": {
 				"MUSE Log-in"		: "https://login.shef.ac.uk/cas/login?service=https%3A%2F%2Fwww.sheffield.ac.uk%2Fnap%2Fpanel%2Flogin",
@@ -99,7 +99,7 @@ function matchLinks(regex = prevregexp) {
 		sn = Object.keys(sites)[i];
 		section = document.createElement("div");
 		section.id = sn;
-		section.innerHTML = sn;
+		section.innerHTML = "<span class='section-title'>"+sn+"</span>";
 		section.className = "section";
 		inner = document.createElement("div");
 		for (l = 0; l < Object.keys(sites[sn]).length; l++) {
@@ -127,6 +127,7 @@ function matchLinks(regex = prevregexp) {
 		document.getElementById("action").children[0].name = query;
 	}
 	document.getElementById("main").style.height = document.getElementById("main").children[0].offsetHeight+"px";
+	console.log(totallinks);
 }
 
 document.onkeydown = function(e) {
@@ -158,6 +159,17 @@ function displayClock() {
 	document.getElementById("clock").innerHTML = clock;
 }
 
+function randombg(){
+	var bigSize = ["url('bg.jpg')",
+	"url('bg2.jpg')",
+	"url('bg3.jpg')",
+	"url('bg4.png')",
+	"url('bmwM1.jpg')"];
+	var random= Math.floor(Math.random() * bigSize.length) + 0;
+	document.body.style.backgroundImage=bigSize[random];
+  }
+
 window.onload = matchLinks();
 displayClock();
 setInterval(displayClock, 1000);
+randombg();
