@@ -39,7 +39,9 @@ var sites = {
 				"r/pcmasterrace"	: "https://www.reddit.com/r/pcmasterrace/",
 				"r/webdesign"		: "https://www.reddit.com/r/web_design/",
 				"r/pcmasterrace"	: "https://www.reddit.com/r/pcmasterrace/",
-				"r/startpage"		: "https://www.reddit.com/r/startpages/",
+				"r/soccerstreams"	: "https://www.reddit.com/r/soccerstreams",
+				"r/piracy"			: "https://www.reddit.com/r/piracy",
+				"r/unity3D"			: "https://www.reddit.com/r/unity3D",
 			},
 			"Entretenimiento": {
 				"YouTube"			: "https://www.youtube.com/",

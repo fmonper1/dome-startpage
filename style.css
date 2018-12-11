@@ -59,6 +59,8 @@ body > div#main > span > div#static_links > span#clock {
 	margin-right: 15px;
 	font-size: 32px;	
 	font-weight: bold;
+	color: white;
+    letter-spacing: 2px;
 }
 
 body > div#main > span > div#static_links > span:first-of-type {
